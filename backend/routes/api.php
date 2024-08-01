@@ -16,3 +16,4 @@ Route::get('faculty/{id}', [FacultyController::class, 'getFacultyByID']);
 
 //add 
 Route::post('addFaculty', [FacultyController::class, 'addFaculty']);
+Route::post('addFaculty', [FacultyController::class, 'deleteFaculty']);
