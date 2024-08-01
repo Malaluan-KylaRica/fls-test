@@ -1,0 +1,49 @@
+<form (ngSubmit)="insertData()">
+  <div class="form-group">
+    <label for="faculty_name">Faculty Name: </label>
+    <input type="text" name="faculty_name" class="form-control" [(ngModel)]="faculty.faculty_name" required>
+  </div>
+
+  <div class="form-group">
+    <label for="faculty_code">Faculty Code: </label>
+    <input type="text" name="faculty_code" class="form-control" [(ngModel)]="faculty.faculty_code" required>
+  </div>
+
+  <div class="form-group">
+    <label for="faculty_email">Faculty Email: </label>
+    <input type="email" name="faculty_email" class="form-control" [(ngModel)]="faculty.faculty_email" required>
+  </div>
+
+  <div class="form-group">
+    <label for="faculty_type">Faculty Type: </label>
+    <input type="text" name="faculty_type" class="form-control" [(ngModel)]="faculty.faculty_type" required>
+  </div>
+
+  <div class="form-group">
+    <label for="faculty_password">Faculty Password: </label>
+    <input type="password" name="faculty_password" class="form-control" [(ngModel)]="faculty.faculty_password" required>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Code</th>
+      <th scope="col">Email</th>
+      <th scope="col">Type</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let faculty of faculties">
+
+      <td>{{ faculty.faculty_name }}</td>
+      <td>{{ faculty.faculty_code }}</td>
+      <td>{{ faculty.faculty_email }}</td>
+      <td>{{ faculty.faculty_type }}</td>
+    </tr>
+  </tbody>
+</table>
+<p> Hello world</p>
